@@ -6,18 +6,14 @@ function Detail() {
     const navigate = useNavigate();
 
     useEffect(() => {
-        if (location.state === undefined) {
-            navigate("/");
-        } else if (location.state === null) {
-            navigate("/");
-        }
+      if (location.state === undefined) {
+        navigate("/");
+      } else if (location.state === null) {
+        navigate("/");
+      }
     });
-    
-    if (location.state) {
-        return <span>{location.state.title}</span>;
-    } else {
-        return null;
-    }
+
+    return <span>{location.state.title}</span>;
 }
 
 export default Detail;
